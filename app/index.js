@@ -28,11 +28,11 @@ module.exports = class FeathersPluginGenerator extends Generator {
       name: 'name',
       message: 'Project name',
       when: !this.pkg.name,
-      default: this.props.name
+      default: '@powerkernel/' + this.props.name
     }, {
       name: 'repository',
       message: 'The GitHub repository URL (e.g. feathersjs/feathers-myplugin)',
-      default: 'feathersjs/' + this.props.name
+      default: 'powerkernel/' + this.props.name
     }, {
       name: 'description',
       message: 'Description',
@@ -52,9 +52,7 @@ module.exports = class FeathersPluginGenerator extends Generator {
   writing () {
     const devDependencies = [
       'semistandard',
-      'mocha',
-      'istanbul@1.1.0-alpha.1',
-      'chai@^3.5.0'
+      'jest'
     ];
 
     if (this.props.client) {
@@ -68,7 +66,7 @@ module.exports = class FeathersPluginGenerator extends Generator {
     }
 
     this.fs.copy(this.templatePath('static/.*'), this.destinationPath());
-    this.fs.copy(this.templatePath('static/**/*'), this.destinationPath());
+    // this.fs.copy(this.templatePath('static/**/*'), this.destinationPath());
     this.fs.copy(this.templatePath('static/.github/**/*'), this.destinationPath('.github/'));
 
     Object.keys(this.fileMap).forEach(function (src) {
