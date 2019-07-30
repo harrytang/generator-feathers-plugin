@@ -1,6 +1,6 @@
 # <%= name %>
 
-[![Build Status](https://travis-ci.org/<%= repository %>.png?branch=master)](https://travis-ci.org/<%= repository %>)
+[![Build Status](https://api.travis-ci.com/<%= repository %>.png?branch=master)](https://travis-ci.org/<%= repository %>)
 [![Maintainability](https://codeclimate.com/github/<%= repository %>/badges/gpa.svg)](https://codeclimate.com/github/<%= repository %>)
 [![Test Coverage](https://codeclimate.com/github/<%= repository %>/badges/coverage.svg)](https://codeclimate.com/github/<%= repository %>/coverage)
 [![Dependency Status](https://img.shields.io/david/<%= repository %>.svg?style=flat-square)](https://david-dm.org/<%= repository %>)
